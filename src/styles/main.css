@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons+Round);
+@import url(./components/container.css);
+@import url(./components/menu.css);
+@import url(./components/button.css);
+@import url(./components/card.css);
+@import url(./components/freemode-slider.css);
+
+:root {
+  --black: #0e1319;
+  --white: #f8f9fa;
+  --primary: #12c9b3;
+  --dark-primary: #0d7669;
+  --yellow: #c9bd12;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+:focus {
+  box-shadow: 0 0 3px 0 var(--dark-primary);
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.page {
+  background-color: var(--black);
+  color: var(--white);
+  position: relative;
+}
+
+.page_overflow_hidden {
+  overflow: hidden;
+}
+
+.page__header {
+  background-color: var(--black);
+  position: sticky;
+  top: 0;
+  z-index: 1010;
+}
+
+.page__detail {
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1020;
+}
+
+.gallery__preview,
+.gallery__thumb,
+.discover__nav,
+.discover__list,
+.upcoming__superior,
+.upcoming__regular {
+  display: block;
+}
+
+.gallery__thumb {
+  margin-top: -8rem;
+}
+
+.discover {
+  margin-top: 5rem;
+}
+
+.discover__list {
+  background-image: linear-gradient(to bottom, var(--black), #10151d);
+  margin-top: 1rem;
+  padding-bottom: 4rem;
+  padding-top: 3rem;
+}
+
+.upcoming {
+  padding-block: 5rem;
+}
+
+.upcoming__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+}
+
+.upcoming__title::after {
+  background-color: var(--primary);
+  border-radius: 9999rem 9999rem 0 0;
+  bottom: -1.25rem;
+  content: "";
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 1.5rem;
+}
+
+.upcoming__superior {
+  margin-top: 6rem;
+}
+
+.upcoming__regular {
+  margin-top: 3rem;
+}
+
+@media only screen and (max-width: 991px) {
+  :root {
+    font-size: 15px;
+  }
+
+  .gallery__thumb {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .gallery__thumb {
+    margin-top: 2.5rem;
+  }
+
+  .discover__list {
+    padding-bottom: 3.5rem;
+    padding-top: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  :root {
+    font-size: 14px;
+  }
+}

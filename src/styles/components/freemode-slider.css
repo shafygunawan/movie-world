@@ -1,0 +1,50 @@
+.freemode-slider {
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.freemode-slider__swiper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.freemode-slider__swiper .swiper-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  margin-block: 1rem;
+}
+
+.freemode-slider__swiper .swiper-slide:last-child {
+  margin-right: 0;
+}
+
+.freemode-slider__swiper .swiper-scrollbar {
+  background-color: #21262c;
+}
+
+.freemode-slider__swiper .swiper-scrollbar-drag{
+  background-color: rgba(248, 249, 250, .25);
+}
+
+.freemode-slider__control {
+  background-color: transparent;
+  border: none;
+  color: rgba(248, 249, 250, .125);
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color .15s;
+}
+
+.freemode-slider__control_prev {
+  left: -.5rem;
+}
+
+.freemode-slider__control_next {
+  right: -.5rem;
+}

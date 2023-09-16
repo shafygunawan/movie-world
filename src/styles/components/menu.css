@@ -1,0 +1,45 @@
+.menu {
+  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+}
+
+.menu__link {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1.75rem .5rem;
+  text-align: center;
+  text-transform: capitalize;
+  transition: color .15s;
+}
+
+.menu__link_size_sm {
+  padding: 1.25rem .5rem;
+}
+
+.menu__link:hover {
+  color: var(--primary);
+}
+
+.menu__link_active {
+  color: var(--primary);
+  pointer-events: none;
+  position: relative;
+}
+
+.menu__link_active::after {
+  background-color: var(--primary);
+  border-radius: 9999rem 9999rem 0 0;
+  bottom: 0;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
